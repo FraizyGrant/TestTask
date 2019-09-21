@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'heebo';
+	src: url('~heebo-black-webfont.woff2') format('woff2'),
+	url('~heebo-black-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: $blackWeight;
+}
+
+@font-face {
+	font-family: 'heebo';
+	src: url('~heebo-bold-webfont.woff2') format('woff2'),
+	url('~heebo-bold-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: $boldWeight;
+}
+
+@font-face {
+	font-family: 'heebo';
+	src: url('~heebo-extrabold-webfont.woff2') format('woff2'),
+	url('~heebo-extrabold-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: $extraBoldWeight;
+}
+
+@font-face {
+	font-family: 'heebo';
+	src: url('~heebo-medium-webfont.woff2') format('woff2'),
+	url('~heebo-medium-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: $mediumWeight;
+}
+
+@font-face {
+	font-family: 'heebo';
+	src: url('~heebo-regular-webfont.woff2') format('woff2'),
+	url('~heebo-regular-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: $regularWeight;
+}
+
+@font-face {
+	font-family: 'heebo';
+	src: url('~heebo-light-webfont.woff2') format('woff2'),
+	url('~heebo-light-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: $lightWeight;
+}
+
+@font-face {
+	font-family: 'heebo';
+	src: url('~heebo-thin-webfont.woff2') format('woff2'),
+	url('~heebo-thin-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: $thinWeight;
+}
