@@ -5,7 +5,7 @@
 <script>
     import Styles from './sass/core.scss';
     module.exports = {
-        name: 'sx-reset-sliders',
+        name: 'my-reset-sliders',
 
         methods: {
             onClick(e) {

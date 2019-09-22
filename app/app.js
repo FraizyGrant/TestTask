@@ -10,9 +10,9 @@ images.keys().forEach(images);
 
 import Vue from 'vue';
 import formCheckbox from 'form-checkbox/main';
-import sheduleType from 'shedule-type/main';
 import mainNav from 'main-nav/main';
-import tabs from 'tabs/main';
+import Tabs from 'tabs/main';
+import SheduleType from 'shedule-type/main';
 import Slider from 'slider/main';
 import ResetSliders from 'slider/reset';
 
@@ -29,9 +29,10 @@ window.app = new Vue({
 
         let components = {};
 
-        components['sx-tabs'] = tabs;
-        components['sx-time-slider'] = Slider;
-        components['sx-reset-sliders'] = ResetSliders;
+        components['my-tabs'] = Tabs;
+        components['my-time-slider'] = Slider;
+        components['my-reset-sliders'] = ResetSliders;
+        components['my-shedule-type'] = SheduleType;
         
         for (let component in components) {
             Vue.component(component, components[component]);

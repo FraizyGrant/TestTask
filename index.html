@@ -57,7 +57,7 @@
                 <section>
                     <form>
                         <div class="content">
-                            <div is="sx-tabs">
+                            <div is="my-tabs">
                                 <div class="tabs__nav">
                                     <a class="tabs__button js-button" href="#profile">Profile</a>
                                     <a class="tabs__button js-button" href="#notifications">Notifications</a>
@@ -70,25 +70,30 @@
                                     <div data-id="notifications" class="tabs__panel js-panel"></div>
                                     <div data-id="password" class="tabs__panel js-panel"></div>
                                     <div data-id="working-hours" class="tabs__panel js-panel">
+										<div is="my-shedule-type" inline-template>
+                                            <div>
+                                                <div class="shedule-type">
+                                                    <div class="shedule-type__text">Shedule</div>
+                                                    <input class="shedule-type__radio" type="radio" value="1" name="shedule" id="shedule-fixed" v-model="type">
+                                                    <label class="shedule-type__label" for="shedule-fixed">Fixed</label>
+                                                    <input class="shedule-type__radio" type="radio" value="2" name="shedule" id="shedule-flexible" v-model="type">
+                                                    <label class="shedule-type__label" for="shedule-flexible">Flexible</label>
+                                                </div>
 
-                                        <div class="shedule-type">
-                                            <div class="shedule-type__text">Shedule</div>
-                                            <input class="shedule-type__radio" type="radio" value="fixed" name="shedule" id="shedule-fixed">
-                                            <label class="shedule-type__label" for="shedule-fixed">Fixed</label>
-                                            <input class="shedule-type__radio" type="radio" value="flexible" name="shedule" id="shedule-flexible" checked>
-                                            <label class="shedule-type__label" for="shedule-flexible">Flexible</label>
-                                        </div>
-
-                                        <div class="time-slider__container">
-                                            <div is="sx-time-slider" is-general></div>
-                                            <div is="sx-time-slider" day-title="Monday"></div>
-                                            <div is="sx-time-slider" day-title="Tuesday"></div>
-                                            <div is="sx-time-slider" day-title="Wednesday"></div>
-                                            <div is="sx-time-slider" day-title="Thursday"></div>
-                                            <div is="sx-time-slider" day-title="Friday" end-time="15:00"></div>
-                                            <div is="sx-time-slider" day-title="Saturday" is-disabled></div>
-                                            <div is="sx-time-slider" day-title="Sunday" is-disabled></div>
-                                        </div>
+                                                <div class="time-slider__container">
+                                                    <div is="my-time-slider" is-general></div>
+                                                    <div v-if="type == '2'">
+                                                        <div is="my-time-slider" day-title="Monday"></div>
+                                                        <div is="my-time-slider" day-title="Tuesday"></div>
+                                                        <div is="my-time-slider" day-title="Wednesday"></div>
+                                                        <div is="my-time-slider" day-title="Thursday"></div>
+                                                        <div is="my-time-slider" day-title="Friday" end-time="15:00"></div>
+                                                        <div is="my-time-slider" day-title="Saturday" is-disabled></div>
+                                                        <div is="my-time-slider" day-title="Sunday" is-disabled></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+										</div>
                                     </div>
                                     <div data-id="call-settings" class="tabs__panel js-panel"></div>
                                 </div>
@@ -96,7 +101,7 @@
                         </div>
                         <div class="cta-panel">
                             <button type="button" class="button">Save changes</button>
-                            <div is="sx-reset-sliders">Cancel</div> to reset changes
+                            <div is="my-reset-sliders">Cancel</div> to reset changes
                         </div>
                     </form>
                 </section>

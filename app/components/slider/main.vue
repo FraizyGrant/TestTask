@@ -7,7 +7,7 @@
         </div>
         <div class="time-slider__controls">
             <div class="time-slider__inputs" v-if="isVisible">
-                <input v-model="time[0]" @input="onInput" /> - <input v-model="time[1]" @input="onInput" />
+                <input type="text" v-model="time[0]" @input="onInput"/> - <input type="text" v-model="time[1]" @input="onInput"/>
                 <span class="time-slider__error-message" role="alert">{{ errorMsg }}</span>
             </div>
             <vue-slider
@@ -40,7 +40,7 @@
     };
 
     module.exports = {
-        name: 'sx-time-slider',
+        name: 'my-time-slider',
         components: {
             VueSlider
         },
@@ -92,11 +92,11 @@
             error(type, msg) {
                 switch (type) {
                     case ERROR_TYPE.MIN:
-                        break
+                        break;
                     case ERROR_TYPE.MAX:
-                        break
+                        break;
                     case ERROR_TYPE.VALUE:
-                        break
+                        break;
                 }
                 this.errorMsg = msg;
             },
@@ -109,7 +109,7 @@
             },
             onInput(e) {
                 if( !(/^(0[0-9]|1[0-9]|2[0-3]|[0-9]):[0-5][0-9]/g.test(e.srcElement.value))) {
-                    this.errorMsg = 'Wrong format! Please use HH:MM format.'
+                    this.errorMsg = 'Wrong format! Please use HH:MM format.';
                     return;
                 }
                 let newValue = this.time.map(val => this.toMinutes(val));

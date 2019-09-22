@@ -6,7 +6,7 @@
     import Styles from './sass/core.scss';
 
     module.exports = {
-        name: 'sx-tabs',
+        name: 'my-tabs',
 
         data() {
             return {
