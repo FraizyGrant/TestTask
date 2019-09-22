@@ -1,0 +1,67 @@
+.time-slider{
+    display: flex;
+    flex-direction: row;
+    padding-bottom:10px;
+    font-size: 15px;
+
+    &__container{
+        padding: 15px 0 25px;
+    }
+
+    &__text{
+        width: 190px;
+        padding: 30px 0 5px 2px;
+    }
+    &__controls{
+        flex-grow: 1;
+    }
+    &__inputs{
+        text-align: center;
+        font-size: 11px;
+		position: relative;
+        margin-bottom:5px;
+        input{
+            display: inline-block;
+            width: 45px;
+            height:20px;
+            border: 1px solid $grey;
+            font-size:13px;
+            line-height:20px;
+            text-align: center;
+            color: $textDarkGrey;
+            @include heebo($regularWeight);
+            border-radius: 2px;
+        }
+    }
+    &__error-message{
+        display: block;
+		position:absolute;
+		right: 0;
+		top: 0;
+		max-width: 38%;
+        color: $brightRed;
+		font-size: 12px;
+		text-align: right;
+    }
+
+    .vue-slider{
+        height: 8px;
+    }
+    .vue-slider-rail{
+        border-radius: 12px;
+        background: $grey;
+    }
+    .vue-slider-process{
+        background: $red;
+    }
+    .vue-slider-dot{
+        width: 20px;
+        height:20px;
+    }
+    .vue-slider-dot-handle{
+        box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    }
+    .vue-slider-dot-tooltip{
+        display: none;
+    }
+}

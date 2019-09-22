@@ -4,36 +4,106 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Test task</title>
+    <title>Settings / Shedule</title>
 	<link rel="stylesheet" href="dist/app.css">
   </head>
   <body>
     <noscript>
       <strong>We're sorry but this page doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app" style="height: 100vh; width: 960px; margin: 100px auto;">
-        <div is="sx-time-slider" day-title="Понедельник" is-active="true"></div>
-        <div is="sx-time-slider" day-title="Вторник" is-active="true"></div>
-        <div is="sx-time-slider" day-title="Среда" is-active="true"></div>
-        <div is="sx-time-slider" day-title="Четверг" is-active="true"></div>
-        <div is="sx-time-slider" day-title="Пятница" is-active="true"></div>
-        <div is="sx-time-slider" day-title="Суббота" is-active="false"></div>
-        <div is="sx-time-slider" day-title="Воскресенье" is-active="false"></div>
-
-        <div is="sx-tabs">
-            <div class="tabs__nav">
-                <a class="tabs__button js-button" href="#tab1">Tab 1</a>
-                <a class="tabs__button js-button" href="#tab2">Tab 2</a>
+    <div id="app" class="wrapper">
+        <aside>
+            <nav>
+                <ul class="main-nav">
+                <li class="main-nav__item main-nav__item--dashboard">
+                    <a class="main-nav__link" href="#">Dashboard</a>
+                </li>
+                <li class="main-nav__item main-nav__item--customers">
+                    <a class="main-nav__link" href="#">Customers</a>
+                </li>
+                <li class="main-nav__item main-nav__item--calendar">
+                    <a class="main-nav__link" href="#">Calendar</a>
+                </li>
+                <li class="main-nav__item main-nav__item--chats">
+                    <a class="main-nav__link" href="#">Chats</a>
+                </li>
+                <li class="main-nav__item main-nav__item--tasks">
+                    <a class="main-nav__link" href="#">Tasks</a>
+                </li>
+                <li class="main-nav__item main-nav__item--inbox">
+                    <a class="main-nav__link" href="#">Inbox</a>
+                </li>
+                <li class="main-nav__item main-nav__item--calls">
+                    <a class="main-nav__link" href="#">Calls</a>
+                </li>
+                <li class="main-nav__item main-nav__item--leads">
+                    <a class="main-nav__link" href="#">Leads</a>
+                </li>
+                <li class="main-nav__item main-nav__item--team">
+                    <a class="main-nav__link" href="#">Team</a>
+                </li>
+            </ul>
+            </nav>
+            <div class="nav-bottom-panel">
+                <a href="#" class="nav-bottom-panel__link">
+                    <img src="app/general/img/person.png" alt="user image"/>
+                    Settings
+                </a>
             </div>
-            <div class="tabs__panels">
-                <div data-id="tab1" class="tabs__panel js-panel">Content 1</div>
-                <div data-id="tab2" class="tabs__panel js-panel">Content 2</div>
-            </div>
-        </div>
+        </aside>
+        <main>
+            <div class="container">
+                <h1 class="page-title">Settings</h1>
+                <section>
+                    <form>
+                        <div class="content">
+                            <div is="sx-tabs">
+                                <div class="tabs__nav">
+                                    <a class="tabs__button js-button" href="#profile">Profile</a>
+                                    <a class="tabs__button js-button" href="#notifications">Notifications</a>
+                                    <a class="tabs__button js-button" href="#password">Password</a>
+                                    <a class="tabs__button js-button is-active" href="#working-hours">Working hours</a>
+                                    <a class="tabs__button js-button" href="#call-settings">Call settings</a>
+                                </div>
+                                <div class="tabs__panels">
+                                    <div data-id="profile" class="tabs__panel js-panel"></div>
+                                    <div data-id="notifications" class="tabs__panel js-panel"></div>
+                                    <div data-id="password" class="tabs__panel js-panel"></div>
+                                    <div data-id="working-hours" class="tabs__panel js-panel">
 
-        <div class="test-icon"></div>
+                                        <div class="shedule-type">
+                                            <div class="shedule-type__text">Shedule</div>
+                                            <input class="shedule-type__radio" type="radio" value="fixed" name="shedule" id="shedule-fixed">
+                                            <label class="shedule-type__label" for="shedule-fixed">Fixed</label>
+                                            <input class="shedule-type__radio" type="radio" value="flexible" name="shedule" id="shedule-flexible" checked>
+                                            <label class="shedule-type__label" for="shedule-flexible">Flexible</label>
+                                        </div>
+
+                                        <div class="time-slider__container">
+                                            <div is="sx-time-slider" is-general></div>
+                                            <div is="sx-time-slider" day-title="Monday"></div>
+                                            <div is="sx-time-slider" day-title="Tuesday"></div>
+                                            <div is="sx-time-slider" day-title="Wednesday"></div>
+                                            <div is="sx-time-slider" day-title="Thursday"></div>
+                                            <div is="sx-time-slider" day-title="Friday" end-time="15:00"></div>
+                                            <div is="sx-time-slider" day-title="Saturday" is-disabled></div>
+                                            <div is="sx-time-slider" day-title="Sunday" is-disabled></div>
+                                        </div>
+                                    </div>
+                                    <div data-id="call-settings" class="tabs__panel js-panel"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta-panel">
+                            <button type="button" class="button">Save changes</button>
+                            <div is="sx-reset-sliders">Cancel</div> to reset changes
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
     </div>
-
+	<script src="dist/vendor.js"></script>
     <script src="dist/app.js"></script>
   </body>
 </html>

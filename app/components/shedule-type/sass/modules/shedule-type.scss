@@ -1,0 +1,29 @@
+.shedule-type {
+	display: block;
+	padding: 0 0 16px;
+	border-bottom: 1px solid $borderGrey;
+	font-size: 15px;
+
+	&__text{
+		display: inline-block;
+		width: 190px;
+		padding-left:2px;
+	}
+
+	&__radio {
+		display: inline-block;
+		width:16px;
+		height:16px;
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+
+	&__label {
+		display: inline-block;
+		margin-right: 15px;
+		color: $textDarkGrey;
+		font-size: 15px;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+}

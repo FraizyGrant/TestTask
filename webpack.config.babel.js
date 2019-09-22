@@ -25,7 +25,6 @@ const common = {
       'app/general/sass',
       'app/general/sass/modules',
       'app/general/sass/settings',
-      'app/general/js',
       'app/general/fonts',
       'app/general/img',
       'node_modules'
@@ -72,7 +71,7 @@ const common = {
           JSON.stringify({
             name: 'icon-' + '[name]',
             prefixize: true,
-          }),
+          })		
       },
       {
         test: /\.modernizrrc(\.json)?$/,
@@ -124,16 +123,6 @@ const devConfig = {
       },
     ],
   },
-  plugins: [
-  /*
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'app',
-      filename: 'app.js',
-      minChunks: Infinity,
-    }),
-	*/
-    //new webpack.NamedModulesPlugin(),
-  ],
   stats: {
     children: false,
   },
@@ -174,7 +163,6 @@ const productionConfig = {
         return context.indexOf('node_modules') >= 0;
       },
     }),
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
   ],
 };
 

@@ -1,0 +1,55 @@
+.main-nav {
+    $block: '.main-nav';
+
+    display: block;
+    list-style-type: none;
+    margin: 70px 0;
+    padding: 0 17px;
+
+    &__item {
+        padding-left:40px;
+        min-height: 23px;
+        line-height: 23px;
+        font-size: 16px;
+
+        & + & {
+            margin-top: 25px;
+        }
+
+        &--dashboard{
+            background: svg-load("../../general/svg/dashboard.svg", fill=$white) no-repeat 0 0;
+        }
+        &--calendar{
+            background: svg-load("../../general/svg/calendar.svg", fill=$white) no-repeat 0 0;
+        }
+        &--calls{
+            background: svg-load("../../general/svg/calls.svg", fill=$white) no-repeat 0 0;
+        }
+        &--chats{
+            background: svg-load("../../general/svg/chats.svg", fill=$white) no-repeat 0 0;
+        }
+        &--customers{
+            background: svg-load("../../general/svg/customers.svg", fill=$white) no-repeat 0 0;
+        }
+        &--inbox{
+            background: svg-load("../../general/svg/inbox.svg", fill=$white) no-repeat 0 0;
+        }
+        &--leads{
+            background: svg-load("../../general/svg/leads.svg", fill=$white) no-repeat 0 0;
+        }
+        &--team{
+            background: svg-load("../../general/svg/team.svg", fill=$white) no-repeat 0 0;
+        }
+        &--tasks{
+            background: svg-load("../../general/svg/tasks.svg", fill=$white) no-repeat 0 0;
+        }
+    }
+
+    &__link{
+        color: $white;
+        &:hover{
+            color: $white;
+        }
+    }
+        
+}

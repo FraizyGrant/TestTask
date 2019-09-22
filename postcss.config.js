@@ -11,6 +11,7 @@ module.exports = {
 	    postcssFlexbugsFixes(),
 	    require('postcss-custom-media'),
 	    require('postcss-media-minmax'),
-        postcssInlineSvg({path: 'app/general/svg' })
+        postcssInlineSvg({path: 'app/general/svg' }),
+		require('postcss-pxtorem')({propList: ['font', 'font-size', 'letter-spacing']})
     ]
 };

@@ -1,0 +1,42 @@
+$scale-factor: 1.125;
+$font-size-base: 16;
+$line-height-base: 20 / $font-size-base;
+
+html {
+    -webkit-text-size-adjust: none;
+    font-size: 100%
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    @include heebo();
+    font-size: $font-size-base + px;
+    line-height: $line-height-base;
+    color: $textGrey;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 25px;
+    line-height: $line-height-base;
+    color: $textDarkGrey;
+    font-weight: $lightWeight;
+}
+
+a {
+    color: $textRed;
+    font-weight: $mediumWeight;
+    text-decoration: none;
+
+    &:hover{
+        color: $textRed;
+        text-decoration: underline;
+    }
+}
+

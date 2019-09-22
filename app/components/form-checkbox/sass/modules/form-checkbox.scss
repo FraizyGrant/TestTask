@@ -1,0 +1,38 @@
+.form-checkbox {
+	$block: ".form-checkbox";
+
+	display: block;
+
+	&__checkbox {
+		display: none;
+		&:checked {
+			& ~ #{$block}__label {
+				&:before{
+					background: $green svg-load("../../general/svg/check.svg", fill=$white) no-repeat 50% 50%;
+					border-color: $green;
+				}
+			}
+
+		}
+	}
+
+	&__label {
+		position: relative;
+		cursor: pointer;
+		color: $textGrey;
+		font-size: 15px;
+		padding-left: 25px;
+		&:before{
+			display: block;
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 2px;
+			width:14px;
+			height:14px;
+			background: $white;
+			border: 1px solid $grey;
+			border-radius: 3px;
+		}
+	}
+}

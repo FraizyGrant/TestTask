@@ -53,11 +53,11 @@
     "postcss-loader": "1.1.1",
     "postcss-media-minmax": "^2.1.2",
     "postcss-object-fit-images": "^1.1.2",
+    "postcss-pxtorem": "^4.0.1",
     "sass-loader": "^6.0.1",
     "style-loader": "0.13.1",
     "stylelint": "^7.9.0",
     "stylelint-config-standard": "^16.0.0",
-    "svg-defs-loader": "0.1.0",
     "svg-sprite-loader": "0.0.31",
     "svgo-loader": "1.1.2",
     "url-loader": "0.5.7",
@@ -69,9 +69,7 @@
     "vue-template-compiler": "2.4.2",
     "vue-template-es2015-compiler": "^1.5.3",
     "webpack": "^3.12.0",
-    "webpack-merge": "^3.0.0",
-    "weekstart": "^1.0.0",
-    "yargs": "6.4.0"
+    "webpack-merge": "^3.0.0"
   },
   "eslintConfig": {
     "extends": "airbnb-base"
